@@ -1,9 +1,8 @@
 ---
 layout: post
-title:  "first post!"
+title:  "how to post new blog"
 ---
 
-# made my blog with github!!
 
 # how to post new blog writing
 
@@ -15,11 +14,12 @@ title:  "first post!"
 
 3. all .md files should start with
 
+<div>
 ---
 layout: post
 title:  "Welcome to Jekyll!"
 ---
-
+</div>
 this header.
 you can check the reference form [here](https://jekyllrb.com/docs/posts/)
 
