@@ -8,7 +8,7 @@ title:  "how to post new blog"
 
 1. the file name must be in below format
 **2024-02-04-**file_name.md
-**2024-05-01-** any_name.md
+**2024-05-01-**any_name.md
 
 2. must save the .md file in _post folder
 
