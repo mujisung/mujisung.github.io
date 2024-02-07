@@ -17,12 +17,16 @@ title:  "how to post new blog"
 
 3. all .md files should start with
 
-<pre>
+
+```
 ---
 layout: post
 title:  "Welcome to Jekyll!"
 ---
-</pre>
+```
+
+
+
 this header.
 you can check the reference form [here](https://jekyllrb.com/docs/posts/)
 
