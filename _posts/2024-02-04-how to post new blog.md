@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "how to post new blog"
+title:  how to post new blog
 ---
 
 
@@ -17,11 +17,10 @@ title:  "how to post new blog"
 
 3. all .md files should start with
 
-
 ```
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title: Welcome to Jekyll!
 ---
 ```
 
