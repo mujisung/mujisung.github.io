@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  how to post new blog
+title:  fdd #how to post new blog
 ---
 
 
