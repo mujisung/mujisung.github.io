@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  fdd #how to post new blog
+title:  how to post new blog
 ---
 
 
@@ -17,12 +17,13 @@ title:  fdd #how to post new blog
 
 3. all .md files should start with
 
-<pre>
+```
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title: Welcome to Jekyll!
 ---
-</pre>
+```
+
 this header.
 you can check the reference form [here](https://jekyllrb.com/docs/posts/)
 
