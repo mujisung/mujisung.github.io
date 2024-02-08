@@ -3,8 +3,7 @@ layout: posts
 title: how to post new blog
 ---
 
-
-# motivation: what settings should each blog post abide when hosting to github? 
+<div style='font-size: 30px;'>motivation: what settings should each blog post abide when hosting to github?</div>
 
 ```table-of-contents
 option1: value1
