@@ -1,10 +1,16 @@
 ---
-layout: post
-title:  how to post new blog
+layout: posts
+title: how to post new blog
 ---
 
 
-# motivation: what settings each blog post should abide when hosting to github? 
+# motivation: what settings should each blog post abide when hosting to github? 
+
+```table-of-contents
+option1: value1
+option2: value2
+```
+
 
 1. the file name must be in below format
 

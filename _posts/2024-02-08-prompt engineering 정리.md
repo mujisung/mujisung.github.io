@@ -1,6 +1,14 @@
 ---
-layout: post
-title: prompt engineering 정리
+layout: posts
+title: prompt engineering
+date: 2024-02-08
+categories:
+  - Programming
+  - Jekyll
+tags:
+  - static-site
+  - jekyll
+  - webdev
 ---
 # motivation: what is prompt engineering?
 
@@ -8,6 +16,11 @@ title: prompt engineering 정리
 option1: value1
 option2: value2
 ```
+
+
+
+
+
 
 # GPT5 unlocks LLM System 2 Thinking?
 
@@ -21,8 +34,8 @@ LLM은 fast thinking(intuition)이다. 인간은 근데 fast thinking과 slow th
 ## prompt strategy
 
 
-> [!note] **1**. chain of thoughts 
+> [!1. chain of thoughts]  
 > "Let's think step by step" 을 prompt 끝에 넣는다.
 
-사실 LLM은 1+1이나, $243*525^2$나, 다 똑같이 다음 단어를 예측하고, sequence로 답을 도출하게 된다. 그래서 
+사실 LLM은 1+1이나, $$243*525^2$$나, 다 똑같이 다음 단어를 예측하고, sequence로 답을 도출하게 된다. 그래서 
 이 방법론을 쓰면 

@@ -20,10 +20,10 @@ title                    : "mujisung's blog"
 title_separator          : "|"
 subtitle                 : "Now Or It's Never!"
 name                     : "Youngseob Won"
-description              : "blog for "
-url                      : "https://mujisung.github.io"
+description              : "blog for seconda brain"
+url                      : #"https://mujisung.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository               : "mujisung/mujisung.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : "/assets/images/무지성.jpg" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
@@ -105,8 +105,8 @@ analytics:
 # Site Author
 author:
   name             : "Youngseob Won"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "second brain blog of Youngseob Won(mujisung)!"
+  avatar           : "/assets/images/원영섭.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  bio              : "My study blog"
   location         : "Republic of Korea"
   email            : "wysgene19@khu.ac.kr"
   links:
@@ -284,9 +284,13 @@ defaults:
       path: ""
       type: posts
     values:
-      layout: single
+      layout: default
       author_profile: true
       read_time: true
       comments: # true
       share: true
       related: true
+      show_date: true
+
+date_format: "%Y-%m-%d"
+
