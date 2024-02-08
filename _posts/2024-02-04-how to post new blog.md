@@ -4,7 +4,7 @@ title:  how to post new blog
 ---
 
 
-# how to post new blog writing
+# motivation: what settings each blog post should abide when hosting to github? 
 
 1. the file name must be in below format
 
