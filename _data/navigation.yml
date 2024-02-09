@@ -6,6 +6,8 @@ main:
     url: /tags/
   - title: "Search"
     url: /search/
+  - title: "CV"
+    url: /CV/
 
 
 docs:
@@ -23,6 +25,7 @@ docs:
       - title: "Tag"
         url: /tags/
 
+
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
@@ -33,7 +36,7 @@ docs:
   #   url: /sitemap/
 
 counts:
-  - title: "카테고리"
+  - title: "Category"
     use: true
-  - title: "태그"
+  - title: "Tag"
     use: true
