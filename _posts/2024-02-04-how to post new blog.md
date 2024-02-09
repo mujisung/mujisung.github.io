@@ -2,23 +2,17 @@
 layout: posts
 title: how to post new blog
 categories: [page settings, ]
-tag: [settings, 세팅] 
+tag: [settings] 
 toc: true
 author_profile: false
 sidebar:
   nav: "docs"
 search: true
-share: true
-related: true
 ---
 
-
-<div style='font-size: 30px;'>motivation: what settings should each blog post abide when hosting to github?</div>
-
-```table-of-contents
-option1: value1
-option2: value2
-```
+<div class="notice--info" markdown="1" style='font-size: 30px'>
+**motivation:** what settings should each blog post abide when hosting to github? 
+</div>
 
 
 1. the file name must be in below format

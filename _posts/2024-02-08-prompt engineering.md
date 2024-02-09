@@ -1,20 +1,19 @@
 ---
 layout: posts
 title: prompt engineering
-date: 2024-02-08
+categories: [AI]
+tag: [prompt engineering]
 toc: true
 author_profile: false
 sidebar:
-  nav: "docs"
+  nav: "counts"
 search: true
 ---
 
-<div style='font-size: 30px;'>motivation: what is prompt engineering?</div>
+<div class="notice--info" markdown="1" style='font-size: 30px'>
+**motivation:** what is prompt engineering? 
+</div>
 
-```table-of-contents
-option1: value1
-option2: value2
-```
 
 
 
