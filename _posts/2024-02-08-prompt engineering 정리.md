@@ -2,13 +2,11 @@
 layout: posts
 title: prompt engineering
 date: 2024-02-08
-# categories:
-#   - Programming
-#   - Jekyll
-# tags:
-#   - static-site
-#   - jekyll
-#   - webdev
+toc: true
+author_profile: false
+sidebar:
+  nav: "docs"
+search: true
 ---
 
 <div style='font-size: 30px;'>motivation: what is prompt engineering?</div>

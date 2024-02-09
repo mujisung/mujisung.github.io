@@ -1,7 +1,17 @@
 ---
 layout: posts
 title: how to post new blog
+categories: [page settings, ]
+tag: [settings, 세팅] 
+toc: true
+author_profile: false
+sidebar:
+  nav: "docs"
+search: true
+share: true
+related: true
 ---
+
 
 <div style='font-size: 30px;'>motivation: what settings should each blog post abide when hosting to github?</div>
 
