@@ -10,6 +10,13 @@ sidebar:      # 글을 누르면 목차가 나온다.
 search: true     # false라고 하면 글이 검색이 안된다.
 ---
 
+<div class="notice--info" markdown="1" style='font-size: 30px'>
+**motivation:** 네이버 블로그 
+</div>
+
+
+
+
 #thread, mutex, and RAII(C++) : 네이버 블로그
 <div class="wrap_rabbit pcol2 _param(1) _postViewArea222816438909" id="post-view222816438909">
 <!-- Rabbit HTML --><div class="se-viewer se-theme-default" lang="ko-KR">

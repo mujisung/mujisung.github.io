@@ -10,6 +10,13 @@ sidebar:      # 글을 누르면 목차가 나온다.
 search: true     # false라고 하면 글이 검색이 안된다.
 ---
 
+<div class="notice--info" markdown="1" style='font-size: 30px'>
+**motivation:** 네이버 블로그 
+</div>
+
+
+
+
 #Spiking Neural Networks and Online Learning: An Overview and Perspectives, Lobo et al, 2019 : 네이버 블로그
 <div class="wrap_rabbit pcol2 _param(1) _postViewArea223329011505" id="post-view223329011505">
 <!-- Rabbit HTML --><div class="se-viewer se-theme-default" lang="ko-KR">
