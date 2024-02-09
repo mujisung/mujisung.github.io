@@ -99,7 +99,7 @@ analytics:
   provider               : "google-gtag" # false # false (default), "google", "google-universal", "google-gtag", "custom"
   google:
     tracking_id          : "G-WKJ45CN3X9"
-    anonymize_ip         : # true, false (default)
+    anonymize_ip         : false # true, false (default)
 
 
 # Site Author
@@ -108,7 +108,7 @@ author:
   avatar           : "/assets/images/원영섭.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Study blog"
   location         : "Republic of Korea"
-  email            : "wysgene19@khu.ac.kr"
+  email            :
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
@@ -118,38 +118,38 @@ author:
       # url: "https://your-website.com"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      # url: "https://twitter.com/"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url: "https://facebook.com/"
+      url: "https://twitter.com/mujisung__"
+    # - label: "Facebook"
+    #   icon: "fab fa-fw fa-facebook-square"
+    #   # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/mujisung"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      url: "https://www.instagram.com/10seob/"
+      url: "https://www.instagram.com/mujisung__/"
 
 # Site Footer
 footer:
   links:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      # url:
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url:
+      url: "https://twitter.com/mujisung__"
+    # - label: "Facebook"
+    #   icon: "fab fa-fw fa-facebook-square"
+    #   # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url:
-    - label: "GitLab"
-      icon: "fab fa-fw fa-gitlab"
-      # url:
-    - label: "Bitbucket"
-      icon: "fab fa-fw fa-bitbucket"
-      # url:
+      url: "https://github.com/mujisung"
+    # - label: "GitLab"
+    #   icon: "fab fa-fw fa-gitlab"
+    #   # url:
+    # - label: "Bitbucket"
+    #   icon: "fab fa-fw fa-bitbucket"
+    #   # url:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      # url:
+      url: "https://www.instagram.com/mujisung__/"
 
 
 # Reading Files
