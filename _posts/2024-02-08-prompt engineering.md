@@ -36,4 +36,4 @@ LLM은 fast thinking(intuition)이다. 인간은 근데 fast thinking과 slow th
 > "Let's think step by step" 을 prompt 끝에 넣는다.
 
 사실 LLM은 1+1이나, $$243*525^2$$나, 다 똑같이 다음 단어를 예측하고, sequence로 답을 도출하게 된다. 그래서 
-이 방법론을 쓰면 
+이 방법론을 쓰면
