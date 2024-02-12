@@ -10,7 +10,7 @@ sidebar:      # 글을 누르면 목차가 나온다.
 search: true     # false라고 하면 글이 검색이 안된다.
 ---
 
-<div class="notice--info" markdown="1" style='font-size: 30px'>
+<div class="notice--info" markdown="1" style='font-size: 20px'>
 **motivation:** 네이버 블로그 
 </div>
 

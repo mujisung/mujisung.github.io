@@ -4,13 +4,14 @@ title: prompt engineering
 categories: [AI]
 tag: [prompt engineering]
 toc: true
+toc_sticky: true
 author_profile: false
 sidebar:
   nav: "counts"
 search: true
 ---
 
-<div class="notice--info" markdown="1" style='font-size: 30px'>
+<div class="notice--info" markdown="1" style='font-size: 20px'>
 **motivation:** what is prompt engineering? 
 </div>
 
