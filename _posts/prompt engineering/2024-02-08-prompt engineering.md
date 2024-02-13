@@ -37,18 +37,20 @@ LLM은 fast thinking(intuition)이다. 인간은 근데 fast thinking과 slow th
 ## strategy 1. Prompting 
 
 
-> [!1. chain of thoughts]  
+> [!Note] Chain of Thoughts  
 > "Let's think step by step" 을 prompt 끝에 넣는다.
-![](../images/20240212-2024-02-08-prompt%20engineering-2.png)
+
+![](../../images/20240212-2024-02-08-prompt%20engineering-2.png)
 
 사실 LLM은 1+1이나, $$243*525^2$$나, 다 똑같이 다음 단어를 예측하고, sequence로 답을 도출하게 된다.
 
 근데 Let's think step by step을 질문 끝에 넣게 되면, 문제를 step으로 나누어서, 단계적으로 풀게끔 한다.
 
 
-> [!1. chain of thoughts]
+> [!Note] chain of thoughts
 > few shot prompt example을 준다. step이 어떻게 되어야 하는지에 대한 예를 줘서, 문제를 어떻게 풀어야할지를 알려주게 된다. > "Let's think step by step" 을 prompt 끝에 넣는 것은 step을 알아서 단계적으로 판단해야 했는데, 이렇게 하면 단계까지 어떻게 전개해야 하는지 알려주는 것이다.
-![](../images/20240212-2024-02-08-prompt%20engineering-1.png)
+
+![](../../images/20240212-2024-02-08-prompt%20engineering-1.png)
 
 근데 이 chain of thoughts의 단점이 있다.  CoT prompting은, LLM이 하나의 가능성만 생각하게 한다. 그러나 우리 인간은, 문제를 해결하려고 할 때, one path/one solution만 생각하지 않는다.
 
@@ -57,9 +59,11 @@ LLM은 fast thinking(intuition)이다. 인간은 근데 fast thinking과 slow th
 그래서 사람들은 더 고도화된 방법인, Self-consistency with Chain of Thought, 'CoT-SC' 라는 방법을 생각해내게 된다.
 > [!Note] CoT-SC
 > LLM이, CoT를 여러번 돌게 한다. 그래서 마지막에는, 가장 reasonable한 답을 투표해서 추출해낸다. 
-> ![](../images/20240212-2024-02-08-prompt%20engineering-3.png)
-> ![](../images/20240212-2024-02-08-prompt%20engineering-4.png)
-> 이 방법은 iterative하게 답을 갖게 되는 coding이 조금 필요하긴 하다.
+
+
+![](../../images/20240212-2024-02-08-prompt%20engineering-3.png)
+![](../../images/20240212-2024-02-08-prompt%20engineering-4.png)
+
 
 그래서 몇가지 다른 답을 내는 path를 통해서 답을 찾게 된다는 점에서 좋은 답이 된다.
 
@@ -70,7 +74,9 @@ LLM은 fast thinking(intuition)이다. 인간은 근데 fast thinking과 slow th
 > [!Note] Tree of Thoughts
 > LLM이, CoT를 여러번 돌게 한다. 그래서 마지막에는, 가장 reasonable한 답을 투표해서 추출해낸다. 
 > 이게 system 2 level thinking을 달성하기 위한 가장 advanced된 prompting 방법이다.
-> ![](../images/20240212-2024-02-08-prompt%20engineering-6.png)
+
+![](../../images/20240212-2024-02-08-prompt%20engineering-6.png)
+
 > LLM이 문제를 해결하는 다른 방법들을 생각해내도록, promising해보이는 모든 다른 branch와 option들을 explore 하는  방법이다. 그리고 이미 explore한 path들에 대해서는 state를 기록해놓는다.
 > 그래서 원하는 outcome을 발생시켰으면, path를 따라가서, second best solution도 찾을 수 있게 되는 것이다.
 > 
@@ -92,7 +98,7 @@ exploration/search process가 ToT의 단점이 된다. 이게 trivial하지는 �
 
 CA는, multi-agent setup이다. user가 두개의 다른 agent를 정의할 수 있다. 그래서 두명의 agent의 conversation을 simulate할 수 있다.
 
-![](../images/20240212-2024-02-08-prompt%20engineering-7.png)
+![](../../images/20240212-2024-02-08-prompt%20engineering-7.png)
 
 원래 CAMEL이라는 project에서 처음 소개되었다. 여기서 보여주는 예시는, LLM이 stock market trading bot을 만들라는 complex한 task다. 이 task를, python programmer와 stock trader라는 두개의 agent의 대화를 simulating해서, 연구를 진행하게 되었다.
 
@@ -108,12 +114,12 @@ CA는, multi-agent setup이다. user가 두개의 다른 agent를 정의할 수 
 
 
 과거 6개월동안, 다른 multi-agent framework들이 나타났다.
-![](../images/20240212-2024-02-08-prompt%20engineering-8.png)
+![](../../images/20240212-2024-02-08-prompt%20engineering-8.png)
 
 가장 좋은 것은 autogen이라고 생각한다. joint-chat/hierarchical chat을 제공해주기 때문.
 다른 것은 아쉽다고 한다.
 
-![](../images/20240212-2024-02-08-prompt%20engineering-9.png)
+![](../../images/20240212-2024-02-08-prompt%20engineering-9.png)
 autogen에서, 복잡한 문제를 풀 수 잇게 해준다고 한다.
 
 autogen studio에서 문제를 풀어보자.
@@ -139,32 +145,32 @@ GPT4에게 질문을 물어보았다. 꽤 어려운 task다. 그런데 그거를
 
 
 1. reviewer
-![](../images/20240212-2024-02-08-prompt%20engineering-12.png)
+![](../../images/20240212-2024-02-08-prompt%20engineering-12.png)
 
 특징은, 'do not give solution'이다.
 
 
 2. problem_solver
 
-![](../images/20240212-2024-02-08-prompt%20engineering-11.png)
+![](../../images/20240212-2024-02-08-prompt%20engineering-11.png)
 특징은, Never say TERMINATE을 추가했다. 
 
 왜냐하면, problem solver는, task를 terminate할 수 없도록 했다. reviewer에게 반드시 승인되어야 하기 때문이다.
 
 
-![](../images/20240212-2024-02-08-prompt%20engineering-13.png)
+![](../../images/20240212-2024-02-08-prompt%20engineering-13.png)
 
 workflow에 grouop problem solver가 있다. group chat workflow가 이미 하나가 있다.
 
-![](../images/20240212-2024-02-08-prompt%20engineering-14.png)
+![](../../images/20240212-2024-02-08-prompt%20engineering-14.png)
 여기에, 다른 agent를 선택할 수 있다. 
 
-![](../images/20240212-2024-02-08-prompt%20engineering-15.png)
+![](../../images/20240212-2024-02-08-prompt%20engineering-15.png)
 
 reviewer가 terminate하기 전까지, group chat을 진행시켜라.
 
 
-![](../images/20240212-2024-02-08-prompt%20engineering-16.png)
+![](../../images/20240212-2024-02-08-prompt%20engineering-16.png)
 
 이제 playground --> +New --> select workflow --> 그런 다음 GPT4에게 주었던 task를 다시 넣는다.
 
@@ -176,7 +182,7 @@ reviewer가 terminate하기 전까지, group chat을 진행시켜라.
 결국에는 change model 또는 reduce token 이라는 두가지 방법으로, cost를 줄일 수 있다. change model은, 모델을 싼 것으로 바꾸는 것이다. memory를 가져오는 것도, 결국에는 더 싼 LLM 모델로 요약을 하고, 그걸로 큰 모델에 결과값을 줘서 결과를 내도록 하는 방법이 사용된다.
 change model에서는, LLM router가 있을 수 있고, cascade가 있을 수 있따.
 참고영상, memory optimization: [https://www.pinecone.io/learn/series/langchain/langchain-conversational-memory/](https://www.pinecone.io/learn/series/langchain/langchain-conversational-memory/)
-![](../images/20240212-2024-02-08-prompt%20engineering-17.png)
+![](../../images/20240212-2024-02-08-prompt%20engineering-17.png)
 
 python @ operator
 [https://stackoverflow.com/a/6392768](https://stackoverflow.com/a/6392768)
