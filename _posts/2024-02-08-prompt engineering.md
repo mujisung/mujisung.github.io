@@ -39,7 +39,7 @@ LLM은 fast thinking(intuition)이다. 인간은 근데 fast thinking과 slow th
 
 > [!1. chain of thoughts]  
 > "Let's think step by step" 을 prompt 끝에 넣는다.
-> ![](../images/20240212-2024-02-08-prompt%20engineering-2.png)
+![](../images/20240212-2024-02-08-prompt%20engineering-2.png)
 
 사실 LLM은 1+1이나, $$243*525^2$$나, 다 똑같이 다음 단어를 예측하고, sequence로 답을 도출하게 된다.
 
@@ -48,7 +48,7 @@ LLM은 fast thinking(intuition)이다. 인간은 근데 fast thinking과 slow th
 
 > [!1. chain of thoughts]
 > few shot prompt example을 준다. step이 어떻게 되어야 하는지에 대한 예를 줘서, 문제를 어떻게 풀어야할지를 알려주게 된다. > "Let's think step by step" 을 prompt 끝에 넣는 것은 step을 알아서 단계적으로 판단해야 했는데, 이렇게 하면 단계까지 어떻게 전개해야 하는지 알려주는 것이다.
-> ![](../images/20240212-2024-02-08-prompt%20engineering-1.png)
+![](../images/20240212-2024-02-08-prompt%20engineering-1.png)
 
 근데 이 chain of thoughts의 단점이 있다.  CoT prompting은, LLM이 하나의 가능성만 생각하게 한다. 그러나 우리 인간은, 문제를 해결하려고 할 때, one path/one solution만 생각하지 않는다.
 
