@@ -1,8 +1,8 @@
 ---
 layout: posts
-title: #title
+title: Proxy Anchor-based Unsupervised Learning for Continuous Generalized Category Discovery #title
 categories: [thesis, AI]
-tag: # [Proxy Anchor, Unsupervised, CGCD  ]  
+tag:  [Proxy Anchor, Unsupervised, CGCD  ]  
 author_profile: false # 글을 누르면 내 소개가 없어짐. true로 하면 얼굴이 나옴.
 sidebar:      # 글을 누르면 목차가 나온다.
   nav: "counts" 
