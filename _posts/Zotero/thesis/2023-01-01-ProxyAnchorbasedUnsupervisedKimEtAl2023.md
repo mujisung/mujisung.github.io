@@ -1,13 +1,17 @@
 ---
 layout: posts
-title: Proxy Anchor-based Unsupervised Learning for Continuous Generalized Category Discovery #title
-categories: [thesis, AI]
-tag:  [Proxy Anchor, Unsupervised, CGCD  ]  
+title: Proxy Anchor-based Unsupervised Learning for Continuous Generalized Category Discovery
+categories: [paper review, AI]
+tag: [Proxy Anchor, Unsupervised, CGCD  ]  
 author_profile: false # 글을 누르면 내 소개가 없어짐. true로 하면 얼굴이 나옴.
 sidebar:      # 글을 누르면 목차가 나온다.
   nav: "counts" 
 search: true     # false라고 하면 글이 검색이 안된다.
 ---
+
+<div class="notice--info" markdown="1" style='font-size: 20px'>
+**motivation:**  understanding CGCD
+</div>
 
 # self notes
 
@@ -87,16 +91,16 @@ search: true     # false라고 하면 글이 검색이 안된다.
 
  
 
-> [!Image]
-> ![](images_for_zotero/2023-01-01-ProxyAnchorbasedUnsupervisedKimEtAl2023/images_for_zotero-2-x42-y589.png)
-> 
+
+![](images_for_zotero/2023-01-01-ProxyAnchorbasedUnsupervisedKimEtAl2023/images_for_zotero-2-x42-y589.png)
+
 
 
  
 
-> [!Image]
-> ![](images_for_zotero/2023-01-01-ProxyAnchorbasedUnsupervisedKimEtAl2023/images_for_zotero-2-x44-y447.png)
-> 
+
+![](images_for_zotero/2023-01-01-ProxyAnchorbasedUnsupervisedKimEtAl2023/images_for_zotero-2-x44-y447.png)
+
 
 
 
@@ -111,9 +115,9 @@ search: true     # false라고 하면 글이 검색이 안된다.
 
  
 
-> [!Image]
-> ![](images_for_zotero/2023-01-01-ProxyAnchorbasedUnsupervisedKimEtAl2023/images_for_zotero-3-x44-y465.png)
-> 
+
+![](images_for_zotero/2023-01-01-ProxyAnchorbasedUnsupervisedKimEtAl2023/images_for_zotero-3-x44-y465.png)
+
 
 
 
@@ -123,9 +127,9 @@ search: true     # false라고 하면 글이 검색이 안된다.
 
  
 
-> [!Image]
-> ![](images_for_zotero/2023-01-01-ProxyAnchorbasedUnsupervisedKimEtAl2023/images_for_zotero-3-x303-y311.png)
-> 
+
+![](images_for_zotero/2023-01-01-ProxyAnchorbasedUnsupervisedKimEtAl2023/images_for_zotero-3-x303-y311.png)
+
 
 
 
@@ -140,16 +144,16 @@ search: true     # false라고 하면 글이 검색이 안된다.
 
  
 
-> [!Image]
-> ![](images_for_zotero/2023-01-01-ProxyAnchorbasedUnsupervisedKimEtAl2023/images_for_zotero-4-x47-y135.png)
-> 
+
+![](images_for_zotero/2023-01-01-ProxyAnchorbasedUnsupervisedKimEtAl2023/images_for_zotero-4-x47-y135.png)
+
 
 
  
 
-> [!Image]
-> ![](images_for_zotero/2023-01-01-ProxyAnchorbasedUnsupervisedKimEtAl2023/images_for_zotero-4-x298-y614.png)
-> 
+
+![](images_for_zotero/2023-01-01-ProxyAnchorbasedUnsupervisedKimEtAl2023/images_for_zotero-4-x298-y614.png)
+
 
 
 
@@ -164,16 +168,16 @@ search: true     # false라고 하면 글이 검색이 안된다.
 
  
 
-> [!Image]
-> ![](images_for_zotero/2023-01-01-ProxyAnchorbasedUnsupervisedKimEtAl2023/images_for_zotero-4-x336-y365.png)
-> 
+
+![](images_for_zotero/2023-01-01-ProxyAnchorbasedUnsupervisedKimEtAl2023/images_for_zotero-4-x336-y365.png)
+
 
 
  
 
-> [!Image]
-> ![](images_for_zotero/2023-01-01-ProxyAnchorbasedUnsupervisedKimEtAl2023/images_for_zotero-4-x309-y226.png)
-> 
+
+![](images_for_zotero/2023-01-01-ProxyAnchorbasedUnsupervisedKimEtAl2023/images_for_zotero-4-x309-y226.png)
+
 
 
 
@@ -193,30 +197,30 @@ search: true     # false라고 하면 글이 검색이 안된다.
 
  
 
-> [!Image]
-> ![](images_for_zotero/2023-01-01-ProxyAnchorbasedUnsupervisedKimEtAl2023/images_for_zotero-5-x52-y468.png)
-> 
 
+![](images_for_zotero/2023-01-01-ProxyAnchorbasedUnsupervisedKimEtAl2023/images_for_zotero-5-x52-y468.png)
 
- 
-
-> [!Image]
-> ![](images_for_zotero/2023-01-01-ProxyAnchorbasedUnsupervisedKimEtAl2023/images_for_zotero-5-x61-y295.png)
-> 
 
 
  
 
-> [!Image]
-> ![](images_for_zotero/2023-01-01-ProxyAnchorbasedUnsupervisedKimEtAl2023/images_for_zotero-5-x68-y204.png)
-> 
+
+![](images_for_zotero/2023-01-01-ProxyAnchorbasedUnsupervisedKimEtAl2023/images_for_zotero-5-x61-y295.png)
+
 
 
  
 
-> [!Image]
-> ![](images_for_zotero/2023-01-01-ProxyAnchorbasedUnsupervisedKimEtAl2023/images_for_zotero-5-x88-y70.png)
-> 
+
+![](images_for_zotero/2023-01-01-ProxyAnchorbasedUnsupervisedKimEtAl2023/images_for_zotero-5-x68-y204.png)
+
+
+
+ 
+
+
+![](images_for_zotero/2023-01-01-ProxyAnchorbasedUnsupervisedKimEtAl2023/images_for_zotero-5-x88-y70.png)
+
 
 
 
@@ -236,58 +240,58 @@ search: true     # false라고 하면 글이 검색이 안된다.
 
  
 
-> [!Image]
-> ![](images_for_zotero/2023-01-01-ProxyAnchorbasedUnsupervisedKimEtAl2023/images_for_zotero-5-x357-y337.png)
-> 
 
+![](images_for_zotero/2023-01-01-ProxyAnchorbasedUnsupervisedKimEtAl2023/images_for_zotero-5-x357-y337.png)
 
- 
-
-> [!Image]
-> ![](images_for_zotero/2023-01-01-ProxyAnchorbasedUnsupervisedKimEtAl2023/images_for_zotero-5-x370-y180.png)
-> 
 
 
  
 
-> [!Image]
-> ![](images_for_zotero/2023-01-01-ProxyAnchorbasedUnsupervisedKimEtAl2023/images_for_zotero-6-x44-y601.png)
-> 
 
+![](images_for_zotero/2023-01-01-ProxyAnchorbasedUnsupervisedKimEtAl2023/images_for_zotero-5-x370-y180.png)
 
- 
-
-> [!Image]
-> ![](images_for_zotero/2023-01-01-ProxyAnchorbasedUnsupervisedKimEtAl2023/images_for_zotero-6-x44-y352.png)
-> 
 
 
  
 
-> [!Image]
-> ![](images_for_zotero/2023-01-01-ProxyAnchorbasedUnsupervisedKimEtAl2023/images_for_zotero-7-x44-y603.png)
-> 
 
+![](images_for_zotero/2023-01-01-ProxyAnchorbasedUnsupervisedKimEtAl2023/images_for_zotero-6-x44-y601.png)
 
- 
-
-> [!Image]
-> ![](images_for_zotero/2023-01-01-ProxyAnchorbasedUnsupervisedKimEtAl2023/images_for_zotero-7-x304-y554.png)
-> 
 
 
  
 
-> [!Image]
-> ![](images_for_zotero/2023-01-01-ProxyAnchorbasedUnsupervisedKimEtAl2023/images_for_zotero-7-x302-y446.png)
-> 
+
+![](images_for_zotero/2023-01-01-ProxyAnchorbasedUnsupervisedKimEtAl2023/images_for_zotero-6-x44-y352.png)
+
 
 
  
 
-> [!Image]
-> ![](images_for_zotero/2023-01-01-ProxyAnchorbasedUnsupervisedKimEtAl2023/images_for_zotero-8-x45-y594.png)
-> 
+
+![](images_for_zotero/2023-01-01-ProxyAnchorbasedUnsupervisedKimEtAl2023/images_for_zotero-7-x44-y603.png)
+
+
+
+ 
+
+
+![](images_for_zotero/2023-01-01-ProxyAnchorbasedUnsupervisedKimEtAl2023/images_for_zotero-7-x304-y554.png)
+
+
+
+ 
+
+
+![](images_for_zotero/2023-01-01-ProxyAnchorbasedUnsupervisedKimEtAl2023/images_for_zotero-7-x302-y446.png)
+
+
+
+ 
+
+
+![](images_for_zotero/2023-01-01-ProxyAnchorbasedUnsupervisedKimEtAl2023/images_for_zotero-8-x45-y594.png)
+
 
 
 
@@ -322,37 +326,37 @@ search: true     # false라고 하면 글이 검색이 안된다.
 
  
 
-> [!Image]
-> ![](images_for_zotero/2023-01-01-ProxyAnchorbasedUnsupervisedKimEtAl2023/images_for_zotero-12-x38-y588.png)
-> 
 
+![](images_for_zotero/2023-01-01-ProxyAnchorbasedUnsupervisedKimEtAl2023/images_for_zotero-12-x38-y588.png)
 
- 
-
-> [!Image]
-> ![](images_for_zotero/2023-01-01-ProxyAnchorbasedUnsupervisedKimEtAl2023/images_for_zotero-12-x43-y307.png)
-> 
 
 
  
 
-> [!Image]
-> ![](images_for_zotero/2023-01-01-ProxyAnchorbasedUnsupervisedKimEtAl2023/images_for_zotero-14-x44-y119.png)
-> 
 
+![](images_for_zotero/2023-01-01-ProxyAnchorbasedUnsupervisedKimEtAl2023/images_for_zotero-12-x43-y307.png)
 
- 
-
-> [!Image]
-> ![](images_for_zotero/2023-01-01-ProxyAnchorbasedUnsupervisedKimEtAl2023/images_for_zotero-15-x45-y119.png)
-> 
 
 
  
 
-> [!Image]
-> ![](images_for_zotero/2023-01-01-ProxyAnchorbasedUnsupervisedKimEtAl2023/images_for_zotero-16-x46-y124.png)
-> 
+
+![](images_for_zotero/2023-01-01-ProxyAnchorbasedUnsupervisedKimEtAl2023/images_for_zotero-14-x44-y119.png)
+
+
+
+ 
+
+
+![](images_for_zotero/2023-01-01-ProxyAnchorbasedUnsupervisedKimEtAl2023/images_for_zotero-15-x45-y119.png)
+
+
+
+ 
+
+
+![](images_for_zotero/2023-01-01-ProxyAnchorbasedUnsupervisedKimEtAl2023/images_for_zotero-16-x46-y124.png)
+
 
 
 ---
