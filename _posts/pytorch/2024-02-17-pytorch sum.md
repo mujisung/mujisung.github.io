@@ -49,8 +49,12 @@ print(row_sum_keepdim) # [[6], [15]]
 
 ```
 
+<br>
+**즉 keepdim=True를 하면, tensor.dim을 유지시켜준다. 근데 tensor.size()(== tensor.shape) 은 변경시키긴 한다.** 
 
-일반화 하자면, dim=x라고 하면, x+1 번쨰 대괄호를 없애고, 그 안에 있는 sequence들끼리 평균을 낸다. 예를 들어서, 
+<br>
+
+일반화 하자면, dim=x라고 하면, x 번쨰 대괄호를 없애고, 그 안에 있는 sequence들끼리 평균을 낸다. 예를 들어서, 
 
 ``` python
 x = torch.tensor([[[1,2],[3,4]],[[5,6],[7,8]]])
@@ -65,3 +69,4 @@ torch.sum(x, dim=2)
 # 2. dim=1 으로 하게 되면, [   [1,2],[3,4]    ]   [ [5,6],[7,8]     ]
 # 3. dim=2 
 ```
+

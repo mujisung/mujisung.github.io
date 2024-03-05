@@ -66,7 +66,7 @@ C/C++ 에서 사용되는 나눗셈 형태로, operand 두개가 둘다 정수�
 
 tensor / tensor 형태로, shape(차원)이 같은 tensor들끼리 나눗셈을 하게 되면 기본적으로 element-wise로 나눗셈을 진행하게 된다. 
 
-근데 tensor1 / tensor2 형태로 나눗셈을 하게 되는데, shape(dimension)이 서로 다르면, `pytorch의 broadcasting(브로드캐스팅)`을 통해서, 서로 다른 모양(shape)의 텐서가 연산을 수행할 수 있도록 한다.
+근데 tensor1 / tensor2 형태로 나눗셈을 하게 되는데, shape(dimension)이 서로 다르면, **'pytorch의 broadcasting(브로드캐스팅)'** 을 통해서, 서로 다른 모양(shape)의 텐서가 연산을 수행할 수 있도록 한다.
 
 한 텐서의 shape이 다른 tensor의 shape과 완전히 일치하는 경우, 또는 둘중 하나의 차원 크기가 1일 때, 즉 (4,1), (1,4) shape을 가지는 tensor가 있다면, 이게 (4,4) 차원의 tensor로 확장되어서(**broadcasting**), 요소별 연산을 수행하게 된다.
 
