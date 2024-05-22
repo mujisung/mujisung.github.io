@@ -1,8 +1,8 @@
 ---
 layout: posts
 title: #title
-categories: # [coding, ]
-tag: # [blog, ]  # tag가 추가됨.
+categories: new_note
+tag: new_note
 toc: true   # 글 오른쪽에 toc가 나온다.
 toc_sticky: true
 author_profile: false # 글을 누르면 내 소개가 없어짐. true로 하면 얼굴이 나옴.

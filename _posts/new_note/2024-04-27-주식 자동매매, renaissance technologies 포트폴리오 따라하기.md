@@ -1,8 +1,8 @@
 ---
 layout: posts
 title: 주식 자동매매, renaissance technologies 포트폴리오 따라하기
-categories: 주식 # [coding, ]
-tag: 주식 # [blog, ]  # tag가 추가됨.
+categories: 주식 
+tag: 주식
 author_profile: false # 글을 누르면 내 소개가 없어짐. true로 하면 얼굴이 나옴.
 sidebar:      # 글을 누르면 목차가 나온다.
   nav: "counts" 

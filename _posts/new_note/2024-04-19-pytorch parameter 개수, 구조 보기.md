@@ -1,8 +1,8 @@
 ---
 layout: posts
 title: pytorch parameter 개수, 구조 보기#title
-categories: pytorch # [coding, ]
-tag: pytorch # [blog, ]  # tag가 추가됨.
+categories: pytorch
+tag: pytorch
 author_profile: false # 글을 누르면 내 소개가 없어짐. true로 하면 얼굴이 나옴.
 sidebar:      # 글을 누르면 목차가 나온다.
   nav: "counts" 
@@ -380,10 +380,10 @@ def print_model_details(model):
 ``` python
 
 def summary(model):
-    print("\n\nprint_model_summary 시작 \n\n")
-    total_param_trainable_Non_trainable(model)
-    print_model_details(model)
-    print("\n\nprint_model_summary 끝\n\n")
-    
+	print("\n\nprint_model_summary 시작 \n\n")
+	total_param_trainable_Non_trainable(model)
+	print_model_details(model)
+	print("\n\nprint_model_summary 끝\n\n")
+	
 ```
 

@@ -1,8 +1,8 @@
 ---
 layout: posts
-title: 신항상성, allostasis load란 무엇인가?  #title
-categories: psychology # [coding, ]
-tag: [allostatis, homeostatis ]  # tag가 추가됨.
+title: 신항상성, allostasis load란 무엇인가? 
+categories: psychology 
+tag: [allostatis, homeostatis ] 
 author_profile: false # 글을 누르면 내 소개가 없어짐. true로 하면 얼굴이 나옴.
 sidebar:      # 글을 누르면 목차가 나온다.
   nav: "counts" 

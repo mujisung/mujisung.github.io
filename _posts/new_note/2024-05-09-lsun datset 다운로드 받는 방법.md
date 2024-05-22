@@ -1,8 +1,8 @@
 ---
 layout: posts
 title: lsun datset 다운로드 받는 방법 #title
-categories: new_note# [coding, ]
-tag: new_note # [blog, ]  # tag가 추가됨.
+categories: new_note
+tag: new_note
 author_profile: false # 글을 누르면 내 소개가 없어짐. true로 하면 얼굴이 나옴.
 sidebar:      # 글을 누르면 목차가 나온다.
   nav: "counts" 
@@ -201,3 +201,4 @@ http://dl.yf.io/lsun/
 
 여기 들어가서, dataset을 일일이 더 빠르게 다운받을 수 있을듯.
 
+wget으로 그냥 다운 가능.
