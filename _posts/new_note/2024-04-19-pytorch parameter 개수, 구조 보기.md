@@ -354,15 +354,26 @@ def print_model_details(model):
             return "Unknown"
     print("Model Details:")
     print("------------------------------------------------------------------------------------------------")
+
+	# 추가.
+    for name, param in model.named_parameters():
+        print(name, param.shape)
+    print()
+    print()
+    print()
+    print()
+
+
     total_params = 0
     total_bytes = 0
     for name, module in model.named_modules():
         if len(list(module.children())) == 0:  # Only print leaf modules
             params = sum(p.numel() for p in module.parameters())
+            requires_grad = any(p.requires_grad for p in module.parameters())
             bytes_per_param = sum(dtype_to_bytes(p.dtype) * p.numel() for p in module.parameters())
             formatted_params = format_params(params)
             formatted_bytes_per_param = format_params(bytes_per_param)
-            print(f"{name:30} | {str(module.__class__.__name__):15} | Params: {formatted_params} | Bytes: {formatted_bytes_per_param}")
+            print(f"{name:30} | {str(module.__class__.__name__):15} | Params: {formatted_params} | Bytes: {formatted_bytes_per_param} | requires_Grad: {requires_grad}")
             total_params += params
             total_bytes += bytes_per_param
     formatted_total_params = format_params(total_params)
@@ -372,6 +383,10 @@ def print_model_details(model):
 
 
 ```
+
+### requires_grad = any(p.requires_grad for p in module.parameters()) 
+
+이 부분은 parameter가 requires grad가 False인지, True인지 알 수 있게 해준다.
 
 
 
@@ -387,3 +402,65 @@ def summary(model):
 	
 ```
 
+
+
+## 더 추가
+
+
+``` python
+
+    for name, param in model.named_parameters():
+        print(name, param.shape)
+    print()
+    print()
+    print()
+    print()
+```
+
+이렇게 하면 parameter.shape도 볼 수 있다.
+
+
+``` python
+
+import torch
+import torch.nn as nn
+
+# 예시 모델
+class MyModel(nn.Module):
+    def __init__(self):
+        super(MyModel, self).__init__()
+        self.conv1 = nn.Conv2d(1, 20, 5)
+        self.conv2 = nn.Conv2d(20, 50, 5)
+        self.fc1 = nn.Linear(800, 500)
+        self.fc2 = nn.Linear(500, 10)
+
+    def forward(self, x):
+        x = torch.relu(self.conv1(x))
+        x = torch.max_pool2d(x, 2, 2)
+        x = torch.relu(self.conv2(x))
+        x = torch.max_pool2d(x, 2, 2)
+        x = x.view(-1, 800)
+        x = torch.relu(self.fc1(x))
+        x = self.fc2(x)
+        return x
+
+# 모델 인스턴스 생성
+model = MyModel()
+
+def print_model_parameters(model):
+    print("{:<85} | {:<20} | {:<10}".format("Layer", "Type", "Parameters"))
+    print("="*120)
+    total_params = 0
+    for name, module in model.named_modules():
+        # 모듈 내 파라미터의 수 계산
+        num_params = sum(p.numel() for p in module.parameters())
+        if num_params > 0:  # 파라미터가 있는 층만 출력
+            print("{:<85} | {:<20} | {:<10}".format(name, type(module).__name__, num_params))
+            total_params += num_params
+    print("="*120)
+    print("Total Parameters:", total_params)
+
+print_model_parameters(model)
+
+
+```

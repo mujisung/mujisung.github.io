@@ -2,7 +2,7 @@
 layout: posts
 title: # Proxy Anchor-based Unsupervised Learning for Continuous Generalized Category Discovery
 categories: [thesis, AI]
-tag: [RICK]  
+tag: [thesis_name  ]  
 author_profile: false # 글을 누르면 내 소개가 없어짐. true로 하면 얼굴이 나옴.
 sidebar:      # 글을 누르면 목차가 나온다.
   nav: "counts" 
@@ -84,5 +84,12 @@ search: true     # false라고 하면 글이 검색이 안된다.
 
 ---
 
-# Annotations---
+# Annotations 
+
+
+![](images_for_zotero/2023-01-01-ExploringIncompatibleKnowledgeZhaoEtAl2023/images_for_zotero-1-x47-y306.png)
+
+
+
+---
 
