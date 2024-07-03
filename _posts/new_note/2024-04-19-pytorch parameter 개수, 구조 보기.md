@@ -354,14 +354,13 @@ def print_model_details(model):
             return "Unknown"
     print("Model Details:")
     print("------------------------------------------------------------------------------------------------")
-
-	# 추가.
     for name, param in model.named_parameters():
-        print(name, param.shape)
-    print()
-    print()
-    print()
-    print()
+	    print(name, param.shape)
+	print()
+	print()
+	print()
+	print()
+
 
 
     total_params = 0
