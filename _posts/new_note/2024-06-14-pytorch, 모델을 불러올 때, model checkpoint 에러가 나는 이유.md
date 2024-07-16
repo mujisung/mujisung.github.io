@@ -1,12 +1,14 @@
 ---
 layout: posts
-title: #title
-categories: [new_note, ]
-tag: [new_note, ]  # tag가 추가됨.
-author_profile: false # 글을 누르면 내 소개가 없어짐. true로 하면 얼굴이 나옴.
-sidebar:      # 글을 누르면 목차가 나온다.
-  nav: "counts" 
-search: true     # false라고 하면 글이 검색이 안된다.
+title: pytorch, 모델을 불러올 때, model checkpoint 에러가 나는 이유
+categories:
+  - new_note
+tags:
+  - new_note
+author_profile: false
+sidebar:
+  nav: counts
+search: true
 ---
 
 <div class="notice--info" markdown="1" style='font-size: 20px'>

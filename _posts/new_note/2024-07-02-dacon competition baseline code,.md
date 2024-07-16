@@ -22,12 +22,13 @@ gdown https://drive.google.com/uc?id=1hi1dibkHyFbaxAteLlZJw6r3g9ddd4Lf
 # conda 환경 만들기
 
 conda create --name MFCC --clone CGCD
-
+conda activate MFCC
 pip install librosa
 pip install pandas
 pip install torchmetrics
 pip install wandb
 
+pip install --upgrade torch torchaudio
 
 
 <br>
@@ -425,3 +426,22 @@ submit.to_csv('./baseline_submit.csv', index=False)
 
 ```
 
+
+
+# 데이터 증강.
+
+## background data는 
+
+https://research.google.com/audioset/download.html
+여기서 다운받음.
+
+https://github.com/audioset/ontology/blob/master/ontology.json
+
+여기서 masking도 함.
+
+https://research.google/pubs/audio-set-an-ontology-and-human-labeled-dataset-for-audio-events/
+
+dataset 설명인듯!
+
+1시간에 240개,
+24시간에 5780
