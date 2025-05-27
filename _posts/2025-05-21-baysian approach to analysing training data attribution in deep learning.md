@@ -5,56 +5,121 @@ title: sumarize paper called 'A Bayesian Approach To Analysing Training Data Att
 
 # motivation: sumarize paper 'A Bayesian Approach To Analysing Training Data Attribution In Deep Learning'
 
+# Blog Post: Rethinking TDA – A Bayesian Approach to Understanding Data Influence in Deep Learning
 
+## Introduction
 
-이 논문은 **“A Bayesian Approach to Analysing Training Data Attribution in Deep Learning”** (Elisa Nguyen et al., NeurIPS 2023)에 관한 것입니다. 간단히 요약하면, 이 논문은 **딥러닝 모델에서 특정 테스트 샘플의 예측에 영향을 미친 훈련 샘플을 찾아주는 Training Data Attribution (TDA)** 기법을 **베이지안 관점에서 재해석**하고, 이 기법들이 실제로 신뢰할 수 있는지를 분석한 연구입니다.
+Training Data Attribution (TDA) aims to explain model behavior by identifying which training examples are most responsible for a particular prediction. Conventionally, this is treated deterministically: for a training sample $$z_j$$ and a test sample $$z$$, TDA is defined as the change in loss on $$z$$ when the model is retrained without $$z_j$$.
 
----
+However, the paper *“A Bayesian Approach to Analysing Training Data Attribution in Deep Learning”* argues that this view is flawed for deep models. The authors propose a **Bayesian reformulation** of TDA, treating attribution as a distribution due to the inherent randomness in training (e.g., initialization and SGD). This perspective leads to a deeper understanding of when TDA estimates are meaningful—and when they’re not.
 
-### 🧠 핵심 아이디어 요약:
+## Background
 
-#### 🔍 **1. Training Data Attribution (TDA)**란?
+The classic definition of TDA is:
 
-- 어떤 테스트 샘플 `z`의 예측에 대해, 훈련 데이터 `z_j`가 얼마나 영향을 주었는지를 수치화함.
-    
-- 기존에는 Leave-One-Out (LOO) 방식으로 `z_j`를 제거하고 다시 모델을 학습시켜서 테스트 샘플 `z`의 loss 변화량을 측정했음.
-    
-    τ(zj,z)=L(z;θ−j)−L(z;θ)\tau(z_j, z) = L(z; \theta_{-j}) - L(z; \theta)τ(zj​,z)=L(z;θ−j​)−L(z;θ)
+$$
+\tau(z_j, z) := \mathcal{L}(f_{\theta_{\setminus j}}, z) - \mathcal{L}(f_\theta, z)
+$$
 
-#### ⚠️ **2. 기존 TDA의 한계점**
+- $$f_\theta$$: model trained on full dataset $$D$$  
+- $$f_{\theta_{\setminus j}}$$: model trained on $$D \setminus \{z_j\}$$  
+- $$\mathcal{L}$$: loss function
 
-- 딥러닝에서는 모델이 **초기화(random init)**나 **SGD 배치 순서**에 따라 크게 달라짐 → TDA 결과도 민감하게 달라짐.
-    
-- Influence Function, Grad-Dot, Grad-Cos 같은 기존 TDA 방법은 이러한 변동성을 무시한 채 단일 모델로만 계산함 → 결과가 불안정함.
-    
+Computing this exactly is expensive because it requires retraining the model for every training sample. Approximation methods like **Influence Functions (IF)** or **Gradient-Dot/Grad-Cos** are often used instead.
 
-#### 📊 **3. 논문의 핵심 기여**
+Yet, these approximations assume a deterministic mapping from dataset to model parameters, which doesn’t hold in deep learning. The same dataset $$D$$ can yield different models due to:
 
-- **TDA 값을 확률 변수로 취급**하고, 여러 번 모델을 학습해 **평균과 분산(μ, σ)**을 추정.
-    
-- 이로 인해 "진짜 TDA가 noise에 의해 영향을 받는 정도"를 수치적으로 검증 가능.
-    
-- TDA 결과가 안정적인 경우 (low-noise pair)만 신뢰할 수 있으며, 그런 경우가 흔치 않다는 것을 실험적으로 보임.
-    
+- Random initialization  
+- Batch order in SGD
 
-#### 🔬 **4. 주요 실험 결과**
+Thus, the trained model parameters $$\theta$$ are actually drawn from a **posterior distribution** $$p(\theta | D)$$. Consequently, the TDA estimate $$\tau(z_j, z)$$ is itself a **random variable**, not a fixed value.
 
-- 다양한 조건(CNN, ViT, 작은/큰 데이터셋, SWA/Ensemble 초기화 등)에서 TDA의 신뢰도(p-value)를 측정.
-    
-- 모델이 복잡할수록, 데이터셋이 클수록, 초기화가 달라질수록 TDA 결과는 더 **불안정**해짐.
-    
-- 특히 ViT 같은 대형 모델에서는 거의 모든 TDA 결과가 noise에 의해 흔들림 → 신뢰 어려움.
-    
+## A Bayesian View of TDA
 
-#### ✅ **5. 제안 사항**
+In this Bayesian formulation:
 
-- TDA를 사용할 때는 평균뿐 아니라 분산까지 고려해 **TDA score의 신뢰성**을 평가해야 함.
-    
-- 추후 연구자는 TDA 방법을 설계하거나 쓸 때 **베이지안 관점**으로 보고, **low-noise pair** 위주로만 사용하라고 권고.
-    
+- Both $$\theta$$ and $$\theta_{\setminus j}$$ are samples from distributions:  
+  $$p(\theta | D)$$ and $$p(\theta_{\setminus j} | D \setminus \{z_j\})$$
+- So the TDA value becomes:  
+  $$
+  \tau(z_j, z) \sim \mathcal{L}(f_{\theta_{\setminus j}}, z) - \mathcal{L}(f_\theta, z)
+  $$
 
----
+### How to sample from the posterior?
 
-### 🧾 결론 요약:
+Two practical approaches:
 
-이 논문은 "딥러닝에서 TDA 기법은 대부분 noise에 취약하고 불안정하다"는 점을 강조하며, TDA를 **point estimate가 아닌 분포(distribution)**로 봐야 하며, 신뢰할 수 있는 평가를 위해 **베이지안 관점**을 도입해야 한다고 주장합니다.
+1. **Deep Ensembles (DE)**: Train multiple models with different initializations or batch orders.
+2. **Stochastic Weight Averaging (SWA)**: Use checkpoints during a single SGD run to approximate posterior samples.
+
+## Experiments
+
+### Datasets
+- MNIST3 (150 train × 900 test = 135,000 pairs)
+- CIFAR-10 (500 train × 500 test = 250,000 pairs)
+
+### Models
+- CNN2-L, CNN3-L (shallow networks)
+- ViT + LoRA (Transformer with low-rank adapters)
+
+### Evaluated TDA Methods
+- Influence Function (IF)
+- Grad-Dot, Grad-Cos
+- Additional Training Step (ATS)
+- Ground-Truth: Leave-One-Out (LOO)
+
+### Posterior Sampling Methods
+- DE-init: different initialization
+- DE-batch: same init, different batch order
+- SWA: use final $$T$$ checkpoints
+
+### Statistical Analysis
+- Estimate **mean** and **variance** of $$\tau(z_j, z)$$
+- Use **Student’s t-test** to check statistical significance:  
+  $$
+  p\text{-value} < 0.05 \Rightarrow \text{signal dominates noise}
+  $$  
+  $$
+  p\text{-value} > 0.05 \Rightarrow \text{noisy estimate, not significant}
+  $$
+
+## Findings
+
+### 1. TDA Is Often Unreliable
+Even the “ground-truth” LOO values are highly variable. IF and Grad-Dot behave similarly. Grad-Cos is somewhat stable on MNIST but fails on CIFAR-10.
+
+### 2. Sources of Variability
+- **Initialization** introduces more variance than batch order.
+- **Model complexity** increases instability.
+- **Dataset size** has a non-monotonic effect: initially more variance, but eventually stabilizes.
+
+### 3. Agreement Between Methods
+Expectations from various methods diverge substantially. The authors identify two rough clusters:
+- Group 1: ATS, IF
+- Group 2: Grad-Dot, Grad-Cos
+
+Yet none aligns well with LOO ground-truth when viewed as a distribution.
+
+## Conclusion
+
+This work delivers a strong message: **TDA should be seen as a distribution**, not a point estimate.
+
+**Key takeaways:**
+1. TDA values depend on randomness in training.
+2. Evaluate both **mean** and **variance** of TDA.
+3. Only trust TDA when the variance is low and the result is statistically significant.
+
+## Strengths
+First to apply Bayesian analysis to TDA  
+Clear criteria for when TDA is reliable  
+Practical evaluation across multiple models and datasets
+
+## Limitations
+Focused on small-scale datasets (MNIST, CIFAR-10)  
+Only gradient-based TDA methods evaluated  
+No hyperparameter optimization in experiments
+
+## References
+-Koh & Liang (2017). *Influence Functions*, ICML.  
+- Charpiat et al. (2019). *Gradient Similarity Methods*, NeurIPS.  
+- Karthikeyan & Søgaard (2021). *Expected TDA*, arXiv.
